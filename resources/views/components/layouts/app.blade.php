@@ -19,7 +19,7 @@
 </head>
 
 <body class="bg-gray-100 h-screen antialiased leading-none">
-    <nav class="bg-blue-900 shadow mb-8 py-6">
+    <nav class="bg-teal-900 shadow mb-8 py-6">
         <div class="container mx-auto px-6 md:px-0">
             <div class="flex items-center justify-center">
                 <div class="mr-6">

@@ -12,6 +12,22 @@ class Task extends Model
 
     protected $guarded = [];
 
+    public function toggleCompletion()
+    {
+        if (! $this->isCompleted()) {
+            $this->status = self::COMPLETED;
+        } else {
+            $this->status = self::PENDING;
+        }
+
+        $this->save();
+    }
+
+    public function isCompleted()
+    {
+        return $this->status === self::COMPLETED;
+    }
+
     public function user()
     {
         return $this->hasOne(User::class);

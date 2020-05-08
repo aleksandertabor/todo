@@ -3,3 +3,27 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.editing {
+    @apply bg-purple-500 border-purple-500;
+
+    &:hover {
+        @apply bg-purple-700 border-purple-700;
+    }
+}
+
+.completed {
+    @apply border-green-500 bg-green-500;
+
+    &:hover {
+        @apply border-green-700 bg-green-700;
+    }
+}
+
+.pending {
+    @apply border-gray-500 bg-gray-500;
+
+    &:hover {
+        @apply border-gray-700 bg-gray-700;
+    }
+}
