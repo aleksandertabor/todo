@@ -23,6 +23,18 @@ class Task extends Model
         $this->save();
     }
 
+    public function toggleInProgress()
+    {
+        $this->status = ! $this->isInProgress() ? self::IN_PROGRESS : self::PENDING;
+
+        $this->save();
+    }
+
+    public function isInProgress()
+    {
+        return $this->status === self::IN_PROGRESS;
+    }
+
     public function isCompleted()
     {
         return $this->status === self::COMPLETED;

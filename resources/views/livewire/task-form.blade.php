@@ -1,4 +1,4 @@
-<div>
+<div class="w-full">
     <form class="w-full mb-2" wire:submit.prevent="">
         <div class="flex items-center border-b border-b-2 border-teal-500 py-2">
             <input wire:model="name"

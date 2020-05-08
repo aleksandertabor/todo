@@ -18,6 +18,11 @@ class Task extends Component
         $this->task->toggleCompletion();
     }
 
+    public function inProgress()
+    {
+        $this->task->toggleInProgress();
+    }
+
     public function render()
     {
         return view('livewire.task');
