@@ -19291,6 +19291,20 @@ video {
   transition-delay: 1000ms;
 }
 
+.btn-todo {
+  flex-shrink: 0;
+  font-size: 0.875rem;
+  border-width: 4px;
+  --text-opacity: 1;
+  color: #fff;
+  color: rgba(255, 255, 255, var(--text-opacity));
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
 .editing {
   --bg-opacity: 1;
   background-color: #9f7aea;

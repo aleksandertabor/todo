@@ -4,8 +4,8 @@
             <input wire:model="name"
                 class="shadow h-12 appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text" placeholder="Task..." aria-label="Full name">
-            <button class="flex-shrink-0 text-sm border-4 text-white py-1 px-2 rounded bg-teal-500 border-teal-500"
-                type="submit" wire:click="add" wire:loading.attr="disabled">
+            <button class="btn-todo bg-teal-500 border-teal-500" type="submit" wire:click="add"
+                wire:loading.attr="disabled">
                 Create task
             </button>
         </div>

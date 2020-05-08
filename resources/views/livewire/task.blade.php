@@ -18,9 +18,11 @@
     </div>
     <div class="flex justify-end w-full md:w-2/6 flex-row flex-wrap mt-2 md:mt-0">
         <button
-            class="flex-shrink-0 bg-orange-500 hover:bg-orange-700 border-orange-500 hover:border-orange-700 text-sm border-4 text-white py-1 px-2 rounded mb-2 sm:mb-0"
+            class="btn-todo bg-orange-500 hover:bg-orange-700 border-orange-500 hover:border-orange-700 mb-2 sm:mb-0 mr-2"
             wire:click.stop="inProgress">
             In Progress
         </button>
+
+        <livewire:delete-task :task="$task"></livewire:delete-task>
     </div>
 </div>

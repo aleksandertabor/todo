@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+.btn-todo {
+    @apply flex-shrink-0 text-sm border-4 text-white py-1 px-2 rounded;
+}
+
 .editing {
     @apply bg-purple-500 border-purple-500;
 

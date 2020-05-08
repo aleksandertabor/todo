@@ -2,10 +2,14 @@
 
 namespace App\Http\Livewire;
 
+use App\Task;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Livewire\Component;
 
 class TaskForm extends Component
 {
+    use AuthorizesRequests;
+
     public $name;
 
     private $rules = ['name' => 'required|string|max:100'];
@@ -33,6 +37,8 @@ class TaskForm extends Component
 
     public function add()
     {
+        $this->authorize('create', Task::class);
+
         $this->validateTask();
 
         auth()->user()->tasks()->create([

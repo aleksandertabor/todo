@@ -2,18 +2,18 @@
 
 namespace App\Http\Livewire;
 
-use App\Task;
 use Livewire\Component;
 
 class TasksList extends Component
 {
     protected $listeners = [
         'taskAdded' => '$refresh',
+        'taskRemoved' => '$refresh',
     ];
 
     public function getTasksProperty()
     {
-        return Task::latest()->get();
+        return auth()->user()->tasks;
     }
 
     public function render()
