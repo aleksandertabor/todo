@@ -4,8 +4,11 @@
 
 @tailwind utilities;
 
-.group:hover .group-hover\:opacity {
-    opacity: 100%;
+
+.task {
+    &:hover .actions {
+        opacity: 1;
+    }
 }
 
 .btn-todo {

@@ -7,7 +7,7 @@
             {{ $task->status }}
         </span>
     </span>
-    <div class="relative group w-full transition duration-500 ease-in-out border-2 flex flex-wrap justify-between items-center p-3 pt-6 hover:bg-gray-300 cursor-pointer {{ !$task->isCompleted() ?: 'border-green-600'}} {{ !$task->isInProgress() ?: 'border-orange-300' }}"
+    <div class="relative task w-full transition duration-500 ease-in-out border-2 flex flex-wrap justify-between items-center p-3 pt-6 hover:bg-gray-300 cursor-pointer {{ !$task->isCompleted() ?: 'border-green-600'}} {{ !$task->isInProgress() ?: 'border-orange-300' }}"
         wire:click="complete">
 
         <span class="flex sm:flex-row items-center text-left pb-2">
@@ -22,7 +22,7 @@
             </span>
             <span class="ml-2 {{ !$task->isCompleted() ?: 'line-through'}}">{{ $task->name }}</span>
         </span>
-        <div class="absolute transition duration-500 ease-in-out flex justify-end flex-row flex-wrap mt-2 mb-2 sm:mt-0 opacity-0 group-hover:opacity h-0"
+        <div class="absolute transition duration-500 ease-in-out flex justify-end flex-row flex-wrap mt-2 mb-2 sm:mt-0 actions opacity-0 h-0"
             style="right: 15px; bottom: 10px;">
             <button class="btn-todo btn-orange mb-2 sm:mb-0 mr-2" wire:click.stop="inProgress">
                 <x-icons.clock></x-icons.clock>

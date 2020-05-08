@@ -1,5 +1,8 @@
 module.exports = {
-    purge: [],
+    purge: [
+        './resources/views/**/*.blade.php',
+        './resources/css/**/*.css',
+    ],
     theme: {
         extend: {},
         fontFamily: {

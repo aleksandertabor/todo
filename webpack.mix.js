@@ -15,4 +15,4 @@ const tailwindcss = require('tailwindcss');
 mix.sass('resources/sass/app.scss', 'public/css')
     .options({
         postCss: [tailwindcss('tailwind.config.js')]
-    })
+    });
