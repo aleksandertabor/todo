@@ -7,9 +7,9 @@
             <button class="btn-todo {{ $this->isEditing ? 'btn-purple' : 'btn-teal' }}" type="submit"
                 wire:click="{{ $this->isEditing ? 'edit' : 'add' }}" wire:loading.attr="disabled">
                 @if ($this->isEditing)
-                Edit task
+                <x-icons.edit></x-icons.edit>
                 @else
-                Create task
+                <x-icons.plus></x-icons.plus>
                 @endif
             </button>
         </div>

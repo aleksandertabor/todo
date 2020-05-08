@@ -30,7 +30,7 @@ class DeleteTask extends Component
         return <<<'blade'
                 <button class="btn-todo btn-red mb-2 sm:mb-0"
                 wire:click.stop="delete" wire:loading.attr="disabled">
-                    Delete
+                    <x-icons.trash></x-icons.trash>
                 </button>
         blade;
     }
