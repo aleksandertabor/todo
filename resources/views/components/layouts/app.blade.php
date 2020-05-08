@@ -51,7 +51,7 @@
             </div>
         </nav>
 
-        @yield('content')
+        {{ $slot }}
     </div>
     @livewireScripts
 </body>
