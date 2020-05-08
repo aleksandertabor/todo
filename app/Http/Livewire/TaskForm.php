@@ -12,11 +12,28 @@ class TaskForm extends Component
 
     public $name;
 
+    public $task;
+
     private $rules = ['name' => 'required|string|max:100'];
 
     private $messages = [
         'name.required' => 'The task :attribute is required.',
     ];
+
+    protected $listeners = [
+        'taskEditing' => 'editing',
+    ];
+
+    public function editing($taskId)
+    {
+        $this->task = Task::findOrFail($taskId);
+        $this->name = $this->task->name;
+    }
+
+    public function getIsEditingProperty()
+    {
+        return $this->task;
+    }
 
     public function updated($field)
     {
@@ -33,6 +50,19 @@ class TaskForm extends Component
             $this->rules,
             $this->messages
         );
+    }
+
+    public function edit()
+    {
+        $this->authorize('update', $this->task);
+
+        $this->validateTask();
+
+        $this->task->update(['name' => $this->name]);
+
+        $this->emitTo('tasks-list', 'taskEdited');
+
+        $this->reset();
     }
 
     public function add()

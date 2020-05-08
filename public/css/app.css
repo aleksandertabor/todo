@@ -19291,6 +19291,10 @@ video {
   transition-delay: 1000ms;
 }
 
+.group:hover .group-hover\:opacity {
+  opacity: 100%;
+}
+
 .btn-todo {
   flex-shrink: 0;
   font-size: 0.875rem;
@@ -19305,7 +19309,25 @@ video {
   border-radius: 0.25rem;
 }
 
-.editing {
+.btn-teal {
+  --bg-opacity: 1;
+  background-color: #38b2ac;
+  background-color: rgba(56, 178, 172, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #38b2ac;
+  border-color: rgba(56, 178, 172, var(--border-opacity));
+}
+
+.btn-teal:hover {
+  --bg-opacity: 1;
+  background-color: #2c7a7b;
+  background-color: rgba(44, 122, 123, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #2c7a7b;
+  border-color: rgba(44, 122, 123, var(--border-opacity));
+}
+
+.btn-purple {
   --bg-opacity: 1;
   background-color: #9f7aea;
   background-color: rgba(159, 122, 234, var(--bg-opacity));
@@ -19314,7 +19336,7 @@ video {
   border-color: rgba(159, 122, 234, var(--border-opacity));
 }
 
-.editing:hover {
+.btn-purple:hover {
   --bg-opacity: 1;
   background-color: #6b46c1;
   background-color: rgba(107, 70, 193, var(--bg-opacity));
@@ -19323,7 +19345,25 @@ video {
   border-color: rgba(107, 70, 193, var(--border-opacity));
 }
 
-.completed {
+.btn-red {
+  --bg-opacity: 1;
+  background-color: #f56565;
+  background-color: rgba(245, 101, 101, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #f56565;
+  border-color: rgba(245, 101, 101, var(--border-opacity));
+}
+
+.btn-red:hover {
+  --bg-opacity: 1;
+  background-color: #c53030;
+  background-color: rgba(197, 48, 48, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #c53030;
+  border-color: rgba(197, 48, 48, var(--border-opacity));
+}
+
+.btn-green {
   --border-opacity: 1;
   border-color: #48bb78;
   border-color: rgba(72, 187, 120, var(--border-opacity));
@@ -19332,7 +19372,7 @@ video {
   background-color: rgba(72, 187, 120, var(--bg-opacity));
 }
 
-.completed:hover {
+.btn-green:hover {
   --border-opacity: 1;
   border-color: #2f855a;
   border-color: rgba(47, 133, 90, var(--border-opacity));
@@ -19341,7 +19381,7 @@ video {
   background-color: rgba(47, 133, 90, var(--bg-opacity));
 }
 
-.pending {
+.btn-gray {
   --border-opacity: 1;
   border-color: #a0aec0;
   border-color: rgba(160, 174, 192, var(--border-opacity));
@@ -19350,7 +19390,7 @@ video {
   background-color: rgba(160, 174, 192, var(--bg-opacity));
 }
 
-.pending:hover {
+.btn-gray:hover {
   --border-opacity: 1;
   border-color: #4a5568;
   border-color: rgba(74, 85, 104, var(--border-opacity));
@@ -19359,7 +19399,7 @@ video {
   background-color: rgba(74, 85, 104, var(--bg-opacity));
 }
 
-.in_progress {
+.btn-orange {
   --border-opacity: 1;
   border-color: #ed8936;
   border-color: rgba(237, 137, 54, var(--border-opacity));
@@ -19368,13 +19408,32 @@ video {
   background-color: rgba(237, 137, 54, var(--bg-opacity));
 }
 
-.in_progress:hover {
+.btn-orange:hover {
   --border-opacity: 1;
   border-color: #c05621;
   border-color: rgba(192, 86, 33, var(--border-opacity));
   --bg-opacity: 1;
   background-color: #c05621;
   background-color: rgba(192, 86, 33, var(--bg-opacity));
+}
+
+button:disabled {
+  --border-opacity: 1;
+  border-color: #a0aec0;
+  border-color: rgba(160, 174, 192, var(--border-opacity));
+  --bg-opacity: 1;
+  background-color: #a0aec0;
+  background-color: rgba(160, 174, 192, var(--bg-opacity));
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  --bg-opacity: 1;
+  background-color: #4a5568;
+  background-color: rgba(74, 85, 104, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #4a5568;
+  border-color: rgba(74, 85, 104, var(--border-opacity));
 }
 
 @media (min-width: 640px) {

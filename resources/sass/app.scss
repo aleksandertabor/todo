@@ -4,11 +4,23 @@
 
 @tailwind utilities;
 
+.group:hover .group-hover\:opacity {
+    opacity: 100%;
+}
+
 .btn-todo {
     @apply flex-shrink-0 text-sm border-4 text-white py-1 px-2 rounded;
 }
 
-.editing {
+.btn-teal {
+    @apply bg-teal-500 border-teal-500;
+
+    &:hover {
+        @apply bg-teal-700 border-teal-700;
+    }
+}
+
+.btn-purple {
     @apply bg-purple-500 border-purple-500;
 
     &:hover {
@@ -16,7 +28,15 @@
     }
 }
 
-.completed {
+.btn-red {
+    @apply bg-red-500 border-red-500;
+
+    &:hover {
+        @apply bg-red-700 border-red-700;
+    }
+}
+
+.btn-green {
     @apply border-green-500 bg-green-500;
 
     &:hover {
@@ -24,7 +44,7 @@
     }
 }
 
-.pending {
+.btn-gray {
     @apply border-gray-500 bg-gray-500;
 
     &:hover {
@@ -32,10 +52,19 @@
     }
 }
 
-.in_progress {
+.btn-orange {
     @apply border-orange-500 bg-orange-500;
 
     &:hover {
         @apply border-orange-700 bg-orange-700;
     }
+}
+
+
+button:disabled {
+    @apply btn-gray cursor-not-allowed;
+}
+
+button:disabled:hover {
+    @apply bg-gray-700 border-gray-700;
 }

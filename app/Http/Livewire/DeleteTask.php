@@ -28,8 +28,8 @@ class DeleteTask extends Component
     public function render()
     {
         return <<<'blade'
-                <button class="btn-todo bg-red-500 hover:bg-red-700 border-red-500 hover:border-red-700 mb-2 sm:mb-0"
-                wire:click="delete" wire:loading.attr="disabled">
+                <button class="btn-todo btn-red mb-2 sm:mb-0"
+                wire:click.stop="delete" wire:loading.attr="disabled">
                     Delete
                 </button>
         blade;

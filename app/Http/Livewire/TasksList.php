@@ -8,12 +8,13 @@ class TasksList extends Component
 {
     protected $listeners = [
         'taskAdded' => '$refresh',
+        'taskEdited' => '$refresh',
         'taskRemoved' => '$refresh',
     ];
 
     public function getTasksProperty()
     {
-        return auth()->user()->tasks;
+        return auth()->user()->tasks()->latest()->get();
     }
 
     public function render()
