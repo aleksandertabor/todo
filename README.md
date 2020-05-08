@@ -48,4 +48,4 @@ sudo chmod -R 775 /var/www/YOURPROJECTNAME/storage
 
 ## 📋 To-do
 
-- Tests [Livewire tests](https://laravel-livewire.com/docs/testing)
+- More tests [Livewire tests](https://laravel-livewire.com/docs/testing)
