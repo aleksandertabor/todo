@@ -7,6 +7,10 @@ use Livewire\Component;
 
 class TasksList extends Component
 {
+    protected $listeners = [
+        'taskAdded' => '$refresh',
+    ];
+
     public function getTasksProperty()
     {
         return Task::latest()->get();
