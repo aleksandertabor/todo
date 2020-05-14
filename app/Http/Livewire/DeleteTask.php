@@ -16,20 +16,11 @@ class DeleteTask extends Component
         $this->task = $task;
     }
 
-    public function delete()
-    {
-        $this->authorize('delete', $this->task);
-
-        $this->task->delete();
-
-        $this->emitTo('tasks-list', 'taskRemoved');
-    }
-
     public function render()
     {
         return <<<'blade'
                 <button class="btn-todo btn-red mb-2 sm:mb-0"
-                wire:click.stop="delete" wire:loading.attr="disabled">
+                wire:click.stop="$emitTo('task-form', 'taskRemove', {{$this->task->id}})" wire:loading.attr="disabled">
                     <x-icons.trash></x-icons.trash>
                 </button>
         blade;

@@ -22,11 +22,12 @@ class TaskForm extends Component
 
     protected $listeners = [
         'taskEditing' => 'editing',
+        'taskRemove' => 'delete',
     ];
 
     public function editing($taskId)
     {
-        $this->task = Task::findOrFail($taskId);
+        $this->task = Task::find($taskId);
         $this->name = $this->task->name;
     }
 
@@ -50,6 +51,19 @@ class TaskForm extends Component
             $this->rules,
             $this->messages
         );
+    }
+
+    public function delete($taskId)
+    {
+        $task = Task::find($taskId);
+
+        $this->authorize('delete', $task);
+
+        $task->delete();
+
+        $this->emitTo('tasks-list', 'taskRemoved');
+
+        $this->reset();
     }
 
     public function edit()

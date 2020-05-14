@@ -1,7 +1,12 @@
 ✔️ ToDo
 ======================
+> [ToDo](https://todo.alexprojects.pl/) - manage your tasks in a simple way.
 
-![todo](https://aleksandertabor.pl/wp-content/uploads/2020/05/todo-livewire.gif)
+## 🖥️ Demo
+
+Live demo: [todo.alexprojects.pl](https://todo.alexprojects.pl/)
+
+![todo](https://aleksandertabor.pl/wp-content/uploads/2020/05/livewire-todo.gif)
 
 # 🚩 Table of Contents
 
