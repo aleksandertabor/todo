@@ -14,7 +14,7 @@ class TaskForm extends Component
 
     public $task;
 
-    private $rules = ['name' => 'required|string|max:100'];
+    protected $rules = ['name' => 'required|string|max:100'];
 
     private $messages = [
         'name.required' => 'The task :attribute is required.',
